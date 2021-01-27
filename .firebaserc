@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ingresp-egreso-app-9dc50": {
+      "hosting": {
+        "ingresoEgresoApp": [
+          "ingresp-egreso-app-9dc50"
+        ]
+      }
+    }
+  }
+}
