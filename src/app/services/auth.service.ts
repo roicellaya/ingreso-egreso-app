@@ -32,7 +32,6 @@ export class AuthService {
 
     this.auth.authState
       .subscribe(fuser => {
-
         if (fuser) {
           this.userSubscription = this.firestore.doc(`${fuser.uid}/usuario`)
             .valueChanges()
@@ -44,7 +43,7 @@ export class AuthService {
             });
         } else {
           this._user = null;
-          this.userSubscription.unsubscribe();
+          this.userSubscription?.unsubscribe();
           this.store.dispatch(authActions.unsetUser());
           this.store.dispatch(iEActions.unsetItems());
         }
